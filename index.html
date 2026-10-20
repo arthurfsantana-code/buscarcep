@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de CEP</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="card-cep">
+        <h1 class="card-title">Consulta de CEP</h1>
+        <p class="card-description">Digite um CEP para preencher o endereço automaticamente.</p>
+
+        <section>
+            <div class="campo cep-campo">
+                <label for="cep">CEP</label>
+                <div>
+                    <input
+                        id="cep"
+                        name="cep"
+                        type="text"
+                        inputmode="numeric"
+                        autocomplete="postal-code"
+                        placeholder="00000-000"
+                        maxlength="9"
+                        aria-describedby="mensagem"
+                        aria-required="true"
+                    >
+                </div>
+            </div>
+
+            <p id="mensagem" class="mensagem" role="status" aria-live="polite"></p>
+
+            <div class="campos-endereco">
+                <div class="campo campo-largo">
+                    <label for="logradouro">Logradouro</label>
+                    <input id="logradouro" name="logradouro" type="text" autocomplete="address-line1" readonly>
+                </div>
+                <div class="campo">
+                    <label for="complemento">Complemento</label>
+                    <input id="complemento" name="complemento" type="text" readonly>
+                </div>
+                <div class="campo">
+                    <label for="bairro">Bairro</label>
+                    <input id="bairro" name="bairro" type="text" readonly>
+                </div>
+                <div class="campo">
+                    <label for="localidade">Cidade</label>
+                    <input id="localidade" name="localidade" type="text" autocomplete="address-level2" readonly>
+                </div>
+                <div class="campo">
+                    <label for="uf">Estado (UF)</label>
+                    <input id="uf" name="uf" type="text" autocomplete="address-level1" readonly>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
